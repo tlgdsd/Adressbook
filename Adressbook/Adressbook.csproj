@@ -173,10 +173,19 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Migrations\202010071159348_CreatedModels.cs" />
+    <Compile Include="Migrations\202010071159348_CreatedModels.Designer.cs">
+      <DependentUpon>202010071159348_CreatedModels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Address.cs" />
+    <Compile Include="Models\ViewModels\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Contact.cs" />
+    <Compile Include="Models\AddressBookDbContext.cs" />
+    <Compile Include="Models\ViewModels\LoginViewModel.cs" />
+    <Compile Include="Models\ViewModels\ManageViewModels.cs" />
+    <Compile Include="Models\ViewModels\RegisterViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -252,6 +261,11 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202010071159348_CreatedModels.resx">
+      <DependentUpon>202010071159348_CreatedModels.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

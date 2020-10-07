@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Adressbook.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,6 +11,7 @@ namespace Adressbook.Controllers
     {
         public ActionResult Index()
         {
+            AddressBookDbContext Db = new AddressBookDbContext();
             return View();
         }
 
