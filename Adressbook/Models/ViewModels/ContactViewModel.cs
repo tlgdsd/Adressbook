@@ -10,7 +10,6 @@ namespace Adressbook.Models.ViewModels
 {
     public class ContactViewModel
     {
-        public int Id { get; set; }
         [Required]
         [Display(Name ="İsim")]
         public string Name { get; set; }

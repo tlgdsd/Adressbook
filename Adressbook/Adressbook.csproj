@@ -268,6 +268,7 @@
     <Compile Include="Models\ApplicationUser.cs" />
     <Compile Include="Models\Contact.cs" />
     <Compile Include="Models\AddressBookDbContext.cs" />
+    <Compile Include="Models\ViewModels\AddressViewModel.cs" />
     <Compile Include="Models\ViewModels\ContactViewModel.cs" />
     <Compile Include="Models\ViewModels\LoginViewModel.cs" />
     <Compile Include="Models\ViewModels\ManageViewModels.cs" />
@@ -332,6 +333,8 @@
     <Content Include="Views\Shared\_NavBar.cshtml" />
     <Content Include="Views\Dashboard\Index.cshtml" />
     <Content Include="Views\Dashboard\NewContactForm.cshtml" />
+    <Content Include="Views\Dashboard\ContactDetails.cshtml" />
+    <Content Include="Views\Dashboard\NewAddressForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

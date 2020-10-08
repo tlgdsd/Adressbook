@@ -1,0 +1,59 @@
+﻿@using Adressbook.Models;
+@model Adressbook.Models.Contact
+
+@{
+    ViewBag.Title = "ContactDetails";
+}
+
+<h2>Kişi Detayları</h2>
+
+<div>
+    <h4>Kişi</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Surname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Surname)
+        </dd>
+    </dl>
+    <h4>Kayıtlı Adresleri</h4>
+    <h6>@Html.ActionLink("Adres Ekle", "NewAddressForm", new { id = Model.Id})</h6>
+    <hr />
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Adres</th>
+                <th scope="col">Şehir</th>
+                <th scope="col">Posta Kodu</th>
+                <th scope="col">Telefon</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Address address in Model.Addresses)
+            {
+                <tr>
+                    <td>@address.AddressText</td>
+                    <td>@address.City</td>
+                    <td>@address.ZipCode</td>
+                    <td>@address.Phone</td>
+                    <td>@Html.ActionLink("Değiştir", "EditAdress", new { id = address.Id})</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<p>
+    @Html.ActionLink("Geri DÖn", "Index")
+</p>
