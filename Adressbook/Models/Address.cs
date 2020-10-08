@@ -12,6 +12,7 @@ namespace Adressbook.Models
         public int Id { get; set; }
         [Required]
         public Contact Contact { get; set; }
+        public bool IsDeleted { get; set; }
         public string AddressText { get; set; }
         public string City { get; set; }
         public decimal ZipCode { get; set; }

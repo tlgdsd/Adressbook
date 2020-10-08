@@ -6,7 +6,6 @@ namespace Adressbook.Models
     {
         [Required]
         [Display(Name = "Kullanıcı Adı")]
-        [EmailAddress]
         public string Username { get; set; }
 
         [Required]

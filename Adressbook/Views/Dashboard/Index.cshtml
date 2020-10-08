@@ -1,0 +1,30 @@
+﻿@using Adressbook.Models;
+@model List<Contact>
+@{
+    ViewBag.Title = "Adreslerim";
+}
+
+<h2>@ViewBag.Title</h2>
+<a>@Html.ActionLink("Yeni Kişi Ekle", "NewContactForm", "Dashboard")</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">İsim</th>
+            <th scope="col">Soyisim</th>
+            <th scope="col">Kayıtlı Adres Sayısı</th>
+            <th scope="col">Sil</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Contact contact in Model)
+        {
+            <tr>
+                <td>@contact.Name</td>
+                <td>@contact.Surname</td>
+                <td>@contact.Addresses.Count()</td>
+                <td>deleteaction</td>
+            </tr>
+        }
+    </tbody>
+</table>

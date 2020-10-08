@@ -13,8 +13,9 @@ namespace Adressbook.Models
         [Required]
         public ApplicationUser User { get; set; }
         public string Name { get; set; }
-        public string Adress { get; set; }
+        public string Surname { get; set; }
         public bool IsDeleted { get; set; }
+        public List<Address> Addresses { get;set; }
 
     }
 }
