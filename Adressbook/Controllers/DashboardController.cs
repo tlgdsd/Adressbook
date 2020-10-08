@@ -1,14 +1,10 @@
 ﻿using Adressbook.Models;
 using Adressbook.Models.ViewModels;
 using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.EntityFramework;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity.Migrations;
-using System.Data.Entity;
 using System.Linq;
-using System.Security.Cryptography;
-using System.Web;
 using System.Web.Mvc;
 
 namespace Adressbook.Controllers
