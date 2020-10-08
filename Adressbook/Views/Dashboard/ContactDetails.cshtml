@@ -38,22 +38,24 @@
                 <th scope="col">Posta Kodu</th>
                 <th scope="col">Telefon</th>
                 <th scope="col"></th>
+                <th scope="col"></th>
             </tr>
         </thead>
         <tbody>
             @foreach (Address address in Model.Addresses)
             {
-                <tr>
-                    <td>@address.AddressText</td>
-                    <td>@address.City</td>
-                    <td>@address.ZipCode</td>
-                    <td>@address.Phone</td>
-                    <td>@Html.ActionLink("Değiştir", "EditAdress", new { id = address.Id})</td>
-                </tr>
+            <tr>
+                <td>@address.AddressText</td>
+                <td>@address.City</td>
+                <td>@address.ZipCode.ToString().Split('.').First()</td>
+                <td>@address.Phone.ToString().Split('.').First()</td>
+                <td>@Html.ActionLink("Değiştir", "EditAddressForm", new { id = address.Id })</td>
+                <td>@Html.ActionLink("Sil", "DeleteAddress", new { id = address.Id })</td>
+            </tr>
             }
         </tbody>
     </table>
 </div>
 <p>
-    @Html.ActionLink("Geri DÖn", "Index")
+    @Html.ActionLink("Geri Dön", "Index")
 </p>

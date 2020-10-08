@@ -1,11 +1,11 @@
 ﻿@using Adressbook.Models;
 @model List<Contact>
 @{
-    ViewBag.Title = "Adreslerim";
+    ViewBag.Title = "Kayıtlı Kişilerim";
 }
 
 <h2>@ViewBag.Title</h2>
-<a>@Html.ActionLink("Yeni Kişi Ekle", "NewContactForm", "Dashboard")</a>
+<h4><a>@Html.ActionLink("Yeni Kişi Ekle", "NewContactForm", "Dashboard")</a></h4>
 
 <table class="table">
     <thead>
@@ -13,6 +13,9 @@
             <th scope="col">İsim</th>
             <th scope="col">Soyisim</th>
             <th scope="col">Kayıtlı Adres Sayısı</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+
         </tr>
     </thead>
     <tbody>
@@ -22,6 +25,8 @@
                 <td>@contact.Name</td>
                 <td>@contact.Surname</td>
                 <td>@contact.Addresses.Count()</td>
+                <td>@Html.ActionLink("Güncelle", "EditContactForm", new { id = contact.Id})</td>
+                <td>@Html.ActionLink("Sil", "DeleteContact", new { id = contact.Id})</td>
             </tr>
         }
     </tbody>

@@ -13,7 +13,7 @@
             <ul class="nav navbar-nav">
                 @if (Request.IsAuthenticated)
                 {
-                    <li>@Html.ActionLink("Adreslerim", "Index", "Dashboard")</li>
+                    <li>@Html.ActionLink("Kayıtlı Kişiler", "Index", "Dashboard")</li>
                 }
             </ul>
             @Html.Partial("_LoginPartial")

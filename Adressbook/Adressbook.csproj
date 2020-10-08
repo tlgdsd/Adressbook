@@ -335,6 +335,9 @@
     <Content Include="Views\Dashboard\NewContactForm.cshtml" />
     <Content Include="Views\Dashboard\ContactDetails.cshtml" />
     <Content Include="Views\Dashboard\NewAddressForm.cshtml" />
+    <Content Include="Views\Dashboard\EditAddressForm.cshtml" />
+    <Content Include="Views\Dashboard\EditContactForm.cshtml" />
+    <Content Include="Views\Dashboard\Error.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
