@@ -338,6 +338,7 @@
     <Content Include="Views\Dashboard\EditAddressForm.cshtml" />
     <Content Include="Views\Dashboard\EditContactForm.cshtml" />
     <Content Include="Views\Dashboard\Error.cshtml" />
+    <Content Include="Views\Dashboard\NotFound.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
